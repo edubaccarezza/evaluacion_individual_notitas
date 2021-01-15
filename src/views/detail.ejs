@@ -21,15 +21,15 @@
 
     <main>
         <section class="editForm">
-            <h1>Editar una nota</h1>
+            <h1>Edita la nota: <%= unaNota.title  %></h1>
             <form action="">
                 <div>
                     <label for="">Título</label>
-                    <input type="text" name="title">
+                    <input type="text" name="title" placeholder="<%= unaNota.title  %>">
                 </div>
                 <div>
                     <label for="message">Mensaje</label>
-                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="<%= unaNota.description  %>"></textarea>
                 </div>
                 <button type="submit">Editar</button>
             </form>

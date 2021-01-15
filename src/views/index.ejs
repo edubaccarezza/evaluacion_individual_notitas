@@ -28,19 +28,20 @@
             </form>
         </section>
         <section class="list">
-            <div class="note">
-                <h2>Un título</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, placeat sapiente! Accusantium sit quod quos.</p>
-                <div class="edit">
-                    <a href="#"><i class="far fa-edit"></i></a>
-                    <form action="">
-                        <button type="submit"><i class="far fa-trash-alt"></i></button>
-                    </form>
-                </div>
+            <% for(let i = 0; i < notas.length; i++) {%>
+            <div class="note"> 
+                    <h2><%= notas[i].title  %> </h2>
+                    <p><%= notas[i].description %> </p>
+                    <div class="edit">
+                        <a href="/detail/<%= notas[i].id %> "><i class="far fa-edit"></i></a>
+                        <form action="">
+                            <button type="submit"><i class="far fa-trash-alt"></i></button>
+                        </form>
+                    </div>    
             </div>
+            <% } %> 
         </section>
     </main>
-
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script>
         window.addEventListener('load', function() {

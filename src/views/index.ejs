@@ -21,9 +21,9 @@
 
     <main>
         <section class="new">
-            <form action="">
+            <form action="" method="POST">
                 <input type="text" name="title" placeholder="Título">
-                <textarea name="" id="" cols="30" placeholder="Añade una nota..."></textarea>
+                <textarea name="description" id="" cols="30" placeholder="Añade una nota..."></textarea>
                 <button type="submit">Crear</button>
             </form>
         </section>
@@ -33,8 +33,8 @@
                     <h2><%= notas[i].title  %> </h2>
                     <p><%= notas[i].description %> </p>
                     <div class="edit">
-                        <a href="/detail/<%= notas[i].id %> "><i class="far fa-edit"></i></a>
-                        <form action="">
+                        <a href="/detail/<%= notas[i].id %>"><i class="far fa-edit"></i></a>
+                        <form action="/<%= notas[i].id %>?_method=DELETE" method="POST">
                             <button type="submit"><i class="far fa-trash-alt"></i></button>
                         </form>
                     </div>    

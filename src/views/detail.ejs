@@ -22,14 +22,14 @@
     <main>
         <section class="editForm">
             <h1>Edita la nota: <%= unaNota.title  %></h1>
-            <form action="">
+            <form action="" method="POST">
                 <div>
                     <label for="">Título</label>
-                    <input type="text" name="title" placeholder="<%= unaNota.title  %>">
+                    <input type="text" name="title" value="<%= unaNota.title  %>">
                 </div>
                 <div>
                     <label for="message">Mensaje</label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="<%= unaNota.description  %>"></textarea>
+                    <textarea name="description" id="message" cols="30" rows="10"><%= unaNota.description  %></textarea>
                 </div>
                 <button type="submit">Editar</button>
             </form>
